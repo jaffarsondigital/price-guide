@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jaffarson Website Price Guide</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+<style>
+/* Layout: one narrow column. Find your business, tick the pages you want, see the price, send it on WhatsApp. */
+:root{
+  --bg:#F3F4F6; --surface:#FFFFFF; --fg:#14181F; --muted:#586170; --line:#DADEE3;
+  --gold:#8F6A0E; --gold-fill:#C9A24A; --gold-ink:#1B1608; --silver:#9AA2AD; --soft:#F7F1E1;
+  --font-body:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --font-head:'Space Grotesk','Inter',system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#12151A; --surface:#1A1E25; --fg:#ECEEF1; --muted:#9AA3AF; --line:#2C323B;
+  --gold:#E0BC66; --gold-fill:#D9B45B; --gold-ink:#1B1608; --silver:#7D8591; --soft:#262216; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12151A; --surface:#1A1E25; --fg:#ECEEF1; --muted:#9AA3AF; --line:#2C323B;
+  --gold:#E0BC66; --gold-fill:#D9B45B; --gold-ink:#1B1608; --silver:#7D8591; --soft:#262216; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--font-body);font-size:17px;line-height:1.6;
+  padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:28px}
+h1,h2,h3{font-family:var(--font-head);line-height:1.2;margin:0;text-wrap:balance}
+h1{font-size:30px;font-weight:700}
+h2{font-size:23px;font-weight:700}
+p{margin:0}
+.muted{color:var(--muted)}
+a{color:var(--gold)}
+:focus-visible{outline:2px solid var(--gold-fill);outline-offset:2px}
+
+.brand{display:flex;align-items:center;gap:12px}
+.brand svg{flex:none}
+.brand b{font-family:var(--font-head);font-size:18px;display:block}
+.brand span{font-size:14px;color:var(--muted)}
+.hero{display:flex;flex-direction:column;gap:12px}
+.hero p{max-width:60ch}
+
+.steps{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-width:0}
+.steps li::before{content:counter(s);font-family:var(--font-head);font-weight:700;color:var(--gold);display:block;font-size:18px}
+
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--line);border-radius:10px}
+table{border-collapse:collapse;width:100%;min-width:480px;font-variant-numeric:tabular-nums}
+th,td{text-align:left;padding:12px 12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:16px}
+th{font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600}
+tr:last-child td{border-bottom:0}
+td.num{white-space:nowrap}
+
+.tools{display:flex;flex-direction:column;gap:10px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding-block:8px;z-index:5}
+.tools input{width:100%;padding:13px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--fg);font:inherit;font-size:16px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding-bottom:4px;scrollbar-width:thin}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:9px 14px;border-radius:999px;font:inherit;font-size:16px;cursor:pointer;white-space:nowrap}
+.chip[aria-pressed="true"]{background:var(--gold-fill);border-color:var(--gold-fill);color:var(--gold-ink);font-weight:600}
+
+.cat{display:flex;flex-direction:column;gap:10px}
+.cat h2 small{font-family:var(--font-body);font-size:15px;font-weight:400;color:var(--muted);margin-left:6px}
+.biz{background:var(--surface);border:1px solid var(--line);border-radius:10px;min-width:0}
+.biz summary{list-style:none;cursor:pointer;padding:16px 14px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.biz summary::-webkit-details-marker{display:none}
+.biz summary::after{content:"+";font-size:20px;color:var(--gold);flex:none}
+.biz[open] summary::after{content:"\2212"}
+.bn{font-weight:600;min-width:0}
+.bm{margin-left:auto;font-size:15px;color:var(--muted);text-align:right}
+.bbody{padding:0 14px 14px;display:flex;flex-direction:column;gap:12px;border-top:1px solid var(--line);padding-top:12px}
+.sub{font-size:13.5px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);font-weight:600}
+ul.pages{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+ul.pages li{border-bottom:1px solid var(--line)}
+ul.pages li:last-child{border-bottom:0}
+ul.pages label{display:flex;align-items:center;gap:12px;padding:12px 0;cursor:pointer;min-width:0}
+ul.pages input{width:22px;height:22px;accent-color:var(--gold-fill);flex:none}
+.pn{flex:1;min-width:0}
+.pp{font-variant-numeric:tabular-nums;color:var(--fg);font-size:16px;white-space:nowrap}
+.tot{background:var(--soft);border-radius:8px;padding:12px 14px;display:flex;flex-direction:column;gap:4px}
+.tot div{display:flex;justify-content:space-between;gap:12px;font-variant-numeric:tabular-nums}
+.tot .big{font-family:var(--font-head);font-weight:700;font-size:23px;margin-top:4px}
+.wa{display:block;font-size:17px;text-align:center;background:var(--gold-fill);color:var(--gold-ink);font-weight:600;text-decoration:none;padding:12px 14px;border-radius:8px}
+.note{font-size:15px;color:var(--muted)}
+.empty{padding:18px;text-align:center;color:var(--muted)}
+
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:8px}
+.panel ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:4px}
+footer{display:flex;flex-direction:column;gap:6px;font-size:16px}
+@media (prefers-reduced-motion:no-preference){.biz{transition:border-color .15s}.biz[open]{border-color:var(--gold-fill)}}
+</style>
+
+<div class="wrap">
+  <div class="brand">
+    <svg width="44" height="30" viewBox="0 0 44 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="var(--gold-fill)" stroke-width="3"/><circle cx="29" cy="15" r="12" fill="none" stroke="var(--silver)" stroke-width="3"/></svg>
+    <div><b>Jaffarson Digital Studios</b><span>Building Brands. Growing Businesses.</span></div>
+  </div>
+
+  <header class="hero">
+    <h1>Website price guide for businesses in Ugunja</h1>
+    <p>Every business needs different pages. Find your business below, see the pages it usually needs, tick the ones you want and watch the price change. Then send your choice to me on WhatsApp.</p>
+    <p class="muted">Example of a finished site: <a href="https://kosimbo-interiors.jaffarsondigitalstudios.workers.dev" target="_blank" rel="noopener">Kosimbo Interiors</a>.</p>
+  </header>
+
+  <ol class="steps">
+    <li><b>Find your business</b><br><span class="muted">Search or pick a group.</span></li>
+    <li><b>Tick your pages</b><br><span class="muted">Add or remove pages. The price updates.</span></li>
+    <li><b>Send on WhatsApp</b><br><span class="muted">I confirm the final quotation. You pay a 60% deposit to start.</span></li>
+  </ol>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>Packages by number of pages</h2>
+    <div class="tablewrap"><table id="pkg"></table></div>
+    <p class="note">The more pages you take, the bigger the discount: 10% from 4 pages, 15% from 7 pages, 20% from 11 pages.</p>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <div class="tools">
+      <input id="q" type="search" placeholder="Search your business, e.g. salon, school, hardware" aria-label="Search your business">
+      <div class="chips" id="chips"></div>
+    </div>
+    <div id="cats" style="display:flex;flex-direction:column;gap:24px"></div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>How each page is priced</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Type of page</th><th>Price</th><th>Examples</th></tr>
+      <tr><td>Home page</td><td class="num">KSh 4,000</td><td>Your first page, with your logo, photos and WhatsApp button</td></tr>
+      <tr><td>Standard page</td><td class="num">KSh 2,500</td><td>About Us, Contact, FAQ, Fees, Team</td></tr>
+      <tr><td>Photo or price page</td><td class="num">KSh 3,500</td><td>Gallery, Menu, Price List, Products, Portfolio</td></tr>
+      <tr><td>WhatsApp booking or order page</td><td class="num">KSh 2,000</td><td>Book on WhatsApp, Order &amp; Delivery</td></tr>
+      <tr><td>Form or tool page</td><td class="num">KSh 5,000</td><td>Request a Quote, Enrol Now, Donate, Calculator</td></tr>
+      <tr><td>Online catalogue with WhatsApp order</td><td class="num">KSh 8,000</td><td>Customers pick items and send the order to your WhatsApp</td></tr>
+    </table></div>
+  </section>
+
+  <section style="display:flex;flex-direction:column;gap:10px">
+    <h2>Other services you can add</h2>
+    <div class="tablewrap"><table>
+      <tr><th>Service</th><th>Price (KSh)</th></tr>
+      <tr><td>Logo design</td><td class="num">2,500 – 5,000</td></tr>
+      <tr><td>Google Business Profile setup (so people find you on Google Maps)</td><td class="num">2,000 – 4,000</td></tr>
+      <tr><td>WhatsApp Business setup (catalogue, greeting, quick replies)</td><td class="num">1,000 – 2,500</td></tr>
+      <tr><td>Facebook, Instagram, TikTok account setup</td><td class="num">1,500 – 3,000</td></tr>
+      <tr><td>Poster / flyer / business card</td><td class="num">500 – 1,500 each</td></tr>
+      <tr><td>Short promo video editing</td><td class="num">500 – 3,500</td></tr>
+      <tr><td>Basic SEO setup</td><td class="num">3,000 – 7,000</td></tr>
+      <tr><td>Own web address (for example yourbusiness.co.ke) connected to your site</td><td class="num">1,500 + the address fee</td></tr>
+      <tr><td>Owner login dashboard (you edit your own prices and photos)</td><td class="num">from 10,000</td></tr>
+      <tr><td>Website updates, per month</td><td class="num">1,500 – 4,000</td></tr>
+      <tr><td>Social media management, per month</td><td class="num">5,000 – 15,000</td></tr>
+    </table></div>
+  </section>
+
+  <section class="panel">
+    <h2>What every website includes</h2>
+    <ul>
+      <li>Looks good on a phone, tablet and computer</li>
+      <li>A WhatsApp button so customers can book or order</li>
+      <li>Your logo and your own photos, placed properly</li>
+      <li>A free live link you can share on WhatsApp and Facebook</li>
+      <li>Free small corrections for 14 days after launch</li>
+    </ul>
+    <p class="note">Prices are starting prices. The final price is confirmed in a written quotation before I start. A 60% deposit starts the work and the balance is paid when the site is ready. Payment by M-Pesa. Costs paid to other companies, such as a web address, are listed separately.</p>
+  </section>
+
+  <footer>
+    <b>Jaffarson Digital Studios, Port Victoria, Kenya</b>
+    <span>WhatsApp: <a href="https://wa.me/254702877785" target="_blank" rel="noopener">0702 877 785</a></span>
+  </footer>
+</div>
+
+<script>
+const T={h:4000,s:2500,r:3500,w:2000,x:5000,c:8000};
+const WA='254702877785';
+const CATS=[
+{id:'beauty',name:'Beauty & personal care',biz:[
+['Salon / beauty lounge','Home h,Services & Prices r,Gallery r,Book on WhatsApp w,About Us s,Offers s,Our Team s,Contact s'],
+['Barbershop','Home h,Services & Prices r,Gallery r,Meet the Barbers s,Book on WhatsApp w,Contact s'],
+['Nail bar','Home h,Nail Styles Gallery r,Prices r,Book on WhatsApp w,Contact s'],
+['Spa & massage','Home h,Treatments r,Packages s,Gallery r,Gift Vouchers s,Book on WhatsApp w,Contact s'],
+['Tailor / fashion designer','Home h,Our Work r,Styles & Fabrics r,Custom Orders w,Measurement Guide s,Prices r,About Us s,Contact s']]},
+{id:'food',name:'Food',biz:[
+['Hotel / restaurant','Home h,Menu r,Gallery r,Daily Specials s,Catering & Events s,Order on WhatsApp w,Customer Reviews s,About Us s,Location & Hours s,Contact s'],
+['Café','Home h,Menu r,Gallery r,About Us s,Order on WhatsApp w,Contact s'],
+['Bakery','Home h,Our Products r,Cakes Gallery r,Custom Cake Orders x,Prices r,About Us s,Contact s'],
+['Butchery','Home h,Products & Prices r,Order & Delivery w,Contact s'],
+['Grocery / greengrocer','Home h,Products & Prices r,Order & Delivery w,Contact s']]},
+{id:'shops',name:'Shops',biz:[
+['Hardware shop','Home h,Product Categories r,Price List r,Brands We Stock s,Delivery s,Request a Quote x,About Us s,Gallery r,Contact s'],
+['Agrovet','Home h,Seeds & Fertiliser r,Animal Feeds r,Veterinary Medicines r,Farm Advice s,Price List r,Delivery s,About Us s,Contact s'],
+['Electronics & phone shop','Home h,Phones r,Accessories r,Repairs s,Prices r,Warranty s,About Us s,Contact s'],
+['Boutique','Home h,New Arrivals r,Collections Gallery r,Size Guide s,Order on WhatsApp w,Offers s,About Us s,Contact s'],
+['M-Pesa & cyber shop','Home h,Services & Charges r,Location & Hours s,Contact s'],
+['Supermarket / wholesaler','Home h,Departments r,Products r,Weekly Offers s,Wholesale Prices r,Delivery s,Order List w,Loyalty Club s,About Us s,Gallery r,Careers s,Contact s']]},
+{id:'edu',name:'Education & health',biz:[
+['School','Home h,About the School s,Admissions x,Fees s,Academics s,Curriculum s,Staff r,Student Life s,Gallery r,News & Events s,School Calendar s,Exam Results s,Parents Corner s,Downloads s,FAQ s,Contact s'],
+['Tuition centre','Home h,Courses r,Timetable s,Fees s,Tutors s,Results s,Enrol Now x,Contact s'],
+['Clinic','Home h,Services r,Our Doctors s,Departments s,Opening Hours s,Book Appointment w,Health Tips s,Insurance Accepted s,About Us s,Contact s'],
+['Pharmacy','Home h,Products r,Health Tips s,Order & Delivery w,Contact s'],
+['Dental / eye clinic','Home h,Services r,Our Specialists s,Prices r,Results Gallery r,Book Appointment w,FAQ s,Contact s']]},
+{id:'trades',name:'Trades & services',biz:[
+['Photographer','Home h,Portfolio r,Weddings r,Events r,Packages & Prices r,Book a Shoot w,About Me s,Contact s'],
+['Event & decor planner','Home h,Services s,Gallery r,Decor Themes r,Packages & Prices r,Venues We Work With s,Customer Reviews s,Book on WhatsApp w,Contact s'],
+['Car wash','Home h,Services & Prices r,Contact s'],
+['Garage','Home h,Services r,Spare Parts r,Prices r,Book a Service w,About Us s,Contact s'],
+['Transport / boda group','Home h,Services & Routes s,Fares r,Contact & Book w'],
+['Builder / contractor','Home h,Services s,Projects r,Gallery r,How We Work s,Materials Guide s,Request a Quote x,About Us s,Customer Reviews s,Contact s'],
+['Furniture maker','Home h,Products r,Gallery r,Custom Orders x,Prices r,How We Work s,About Us s,Contact s'],
+['Welder / fabricator','Home h,Products r,Gallery r,Prices r,Request a Quote x,Contact s']]},
+{id:'lodging',name:'Events & lodging',biz:[
+['Guest house / lodge','Home h,Rooms r,Rates r,Gallery r,Facilities s,Meals s,Conference Space s,Location & Directions s,Book a Room w,Contact s'],
+['Event venue','Home h,Halls & Capacity r,Gallery r,Packages & Prices r,Catering s,Availability s,Book the Venue w,About Us s,Contact s'],
+['Tent & chair hire','Home h,Tents & Chairs r,Prices r,Gallery r,Book on WhatsApp w,Contact s']]},
+{id:'community',name:'Community',biz:[
+['Church','Home h,About Us s,What We Believe s,Service Times s,Ministries s,Sermons r,Events s,Gallery r,Give x,Prayer Requests x,Leadership s,Contact s'],
+['SACCO','Home h,About Us s,Products s,Loans s,Savings s,Membership s,Our Leaders s,AGM & Meetings s,Downloads s,News s,FAQ s,Loan Calculator x,Join Us x,Contact s'],
+['NGO','Home h,About Us s,Mission & Vision s,Programmes r,Projects r,Our Impact s,Our Team s,Gallery r,Stories s,News s,Donate x,Volunteer x,Partners s,Contact s'],
+['Youth group','Home h,About Us s,Activities s,Gallery r,Join Us x,Contact s']]},
+{id:'farming',name:'Farming',biz:[
+['Poultry farmer','Home h,Products r,Prices r,Gallery r,Order & Delivery w,Contact s'],
+['Fish farmer','Home h,Fish & Products r,Prices r,Gallery r,Order & Delivery w,Contact s'],
+['Produce supplier','Home h,Products r,Seasonal Availability s,Bulk Prices r,Order on WhatsApp w,Delivery s,Contact s']]}
+];
+const EXTRAS='FAQ s,Customer Reviews s,News & Offers s,Location & Map s,Photo Gallery r,Online Catalogue with WhatsApp Order c';
+
+const parse=str=>str.split(',').map(x=>{x=x.trim();const i=x.lastIndexOf(' ');return{n:x.slice(0,i),t:x.slice(i+1)}});
+const fmt=n=>'KSh '+n.toLocaleString('en-US');
+const disc=n=>n>=11?.2:n>=7?.15:n>=4?.1:0;
+const quote=items=>{const sub=items.reduce((a,p)=>a+T[p.t],0);const d=disc(items.length);
+  const total=d?Math.round(sub*(1-d)/500)*500:sub;return{sub,d,total}};
+const tier=n=>n===1?'Mini':n<=3?'Starter':n<=6?'Business':n<=10?'Professional':'Premium';
+const range=n=>n===1?'1 page':n<=3?'2–3 pages':n<=6?'4–6 pages':n<=10?'7–10 pages':'11–18 pages';
+
+CATS.forEach(c=>c.biz=c.biz.map(b=>({name:b[0],pages:parse(b[1])})));
+
+// package table from the real business lists
+const groups={};
+CATS.forEach(c=>c.biz.forEach(b=>{const k=tier(b.pages.length);(groups[k]=groups[k]||[]).push({name:b.name,p:quote(b.pages).total})}));
+document.getElementById('pkg').innerHTML='<tr><th>Package</th><th>Pages</th><th>Price</th><th>Usually fits</th></tr>'+
+ ['Mini','Starter','Business','Professional','Premium'].filter(k=>groups[k]).map(k=>{
+  const g=groups[k],lo=Math.min(...g.map(x=>x.p)),hi=Math.max(...g.map(x=>x.p));
+  const n={Mini:1,Starter:2,Business:4,Professional:7,Premium:11}[k];
+  return `<tr><td><b>${k}</b></td><td class="num">${range(n)}</td><td class="num">${lo===hi?fmt(lo):fmt(lo)+' – '+fmt(hi)}</td><td>${g.slice(0,4).map(x=>x.name).join(', ')}${g.length>4?', and more':''}</td></tr>`}).join('');
+
+// chips + categories
+const chips=document.getElementById('chips'),cats=document.getElementById('cats');
+let activeCat='all';
+chips.innerHTML=[{id:'all',name:'All'}].concat(CATS).map(c=>`<button class="chip" type="button" data-cat="${c.id}" aria-pressed="${c.id==='all'}">${c.name}</button>`).join('');
+cats.innerHTML=CATS.map((c,ci)=>`<section class="cat" data-cat="${c.id}"><h2>${c.name}<small>${c.biz.length} business types</small></h2>`+
+ c.biz.map((b,bi)=>{
+  const q=quote(b.pages);
+  const have=b.pages.map(p=>p.n.toLowerCase());
+  const extras=parse(EXTRAS).filter(e=>!have.some(h=>h.includes(e.n.toLowerCase().split(' ')[0])));
+  const row=(p,pi,on,lock)=>`<li><label><input type="checkbox" data-t="${p.t}" data-n="${p.n}" ${on?'checked':''} ${lock?'disabled':''}><span class="pn">${p.n}</span><span class="pp">${fmt(T[p.t])}</span></label></li>`;
+  return `<details class="biz" data-ci="${ci}" data-bi="${bi}" data-name="${b.name.toLowerCase()}">
+   <summary><span class="bn">${b.name}</span><span class="bm">${b.pages.length} pages<br>${fmt(q.total)}</span></summary>
+   <div class="bbody">
+    <div class="sub">Pages usually needed</div>
+    <ul class="pages">${b.pages.map((p,pi)=>row(p,pi,true,p.n==='Home')).join('')}</ul>
+    <div class="sub">More pages you can add</div>
+    <ul class="pages">${extras.map((p,pi)=>row(p,pi,false,false)).join('')}</ul>
+    <div class="tot"></div>
+    <a class="wa" target="_blank" rel="noopener" href="#">Send my choice on WhatsApp</a>
+   </div></details>`}).join('')+'</section>').join('')+'<p class="empty" id="none" hidden>No business found. Send me a message and I will quote your pages.</p>';
+
+function refresh(d){
+  const boxes=[...d.querySelectorAll('input:checked')];
+  const items=boxes.map(i=>({n:i.dataset.n,t:i.dataset.t}));
+  const q=quote(items);
+  d.querySelector('.tot').innerHTML=
+   `<div><span>Pages chosen</span><span>${items.length}</span></div>
+    <div><span>Pages total</span><span>${fmt(q.sub)}</span></div>
+    ${q.d?`<div><span>Discount (${Math.round(q.d*100)}%)</span><span>− ${fmt(q.sub-q.total)}</span></div>`:''}
+    <div class="big"><span>Your price</span><span>${fmt(q.total)}</span></div>
+    <div class="muted"><span>Deposit to start (60%)</span><span>${fmt(Math.round(q.total*.6))}</span></div>`;
+  const name=d.querySelector('.bn').textContent;
+  const msg=`Hello Jaffarson Digital Studios. I own a business (${name}) in Ugunja and I want a website.\nPages I chose: ${items.map(i=>i.n).join(', ')}.\nEstimated price: ${fmt(q.total)}. Please send me the quotation.`;
+  d.querySelector('.wa').href=`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`;
+}
+document.querySelectorAll('.biz').forEach(refresh);
+cats.addEventListener('change',e=>{const d=e.target.closest('.biz');if(d)refresh(d)});
+
+function applyFilter(){
+  const t=document.getElementById('q').value.trim().toLowerCase();let any=false;
+  document.querySelectorAll('.cat').forEach(s=>{
+    let vis=0;
+    s.querySelectorAll('.biz').forEach(b=>{const show=(activeCat==='all'||s.dataset.cat===activeCat)&&(!t||b.dataset.name.includes(t)||s.querySelector('h2').textContent.toLowerCase().includes(t));b.hidden=!show;if(show)vis++});
+    s.hidden=vis===0;if(vis)any=true;
+  });
+  document.getElementById('none').hidden=any;
+}
+chips.addEventListener('click',e=>{const b=e.target.closest('.chip');if(!b)return;activeCat=b.dataset.cat;
+  chips.querySelectorAll('.chip').forEach(c=>c.setAttribute('aria-pressed',String(c===b)));applyFilter()});
+document.getElementById('q').addEventListener('input',applyFilter);
+</script>
